@@ -9,7 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DokterKit">
-        <activity android:name=".FilesActivity"></activity>
+        <activity android:name=".TatalaksanaActivity"></activity>
+        <activity android:name=".ManifestasiKlinisActivity" />
+        <activity android:name=".KomplikasiActivity" />
+        <activity android:name=".DiagnosisActivity" />
+        <activity android:name=".PrognosisActivity" />
+        <activity android:name=".PemeriksaanLabActivity" />
+        <activity android:name=".PenyebabKasusActivity" />
+        <activity android:name=".PemeriksaanFisikActivity" />
+        <activity android:name=".AnamnesisActivity" />
+        <activity android:name=".AddDataActivity" />
+        <activity android:name=".GiziActivity" />
+        <activity android:name=".FilesActivity" />
         <activity android:name=".HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

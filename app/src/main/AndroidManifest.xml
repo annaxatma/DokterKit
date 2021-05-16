@@ -9,7 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DokterKit">
-        <activity android:name=".TatalaksanaActivity"></activity>
+        <activity android:name=".WaitActivity"></activity>
+        <activity android:name=".DataPasienActivity" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".TatalaksanaActivity" />
         <activity android:name=".ManifestasiKlinisActivity" />
         <activity android:name=".KomplikasiActivity" />
         <activity android:name=".DiagnosisActivity" />
@@ -21,7 +27,7 @@
         <activity android:name=".AddDataActivity" />
         <activity android:name=".GiziActivity" />
         <activity android:name=".FilesActivity" />
-        <activity android:name=".HomeActivity">
+        <activity android:name=".SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

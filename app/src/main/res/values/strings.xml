@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">DokterKit</string>
+    <string name="tunggu">Tunggu Sebentar . . .</string>
 </resources>

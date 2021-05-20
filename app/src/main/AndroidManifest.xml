@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.dokterkit">
+    package="com.example.dokterkit" >
 
     <application
         android:allowBackup="true"
@@ -8,8 +8,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.DokterKit">
-        <activity android:name=".WaitActivity"></activity>
+        android:theme="@style/Theme.DokterKit" >
+        <activity android:name=".EditProfileActivity" >
+        </activity>
+        <activity android:name=".SeeDataActivity" />
+        <activity android:name=".WaitActivity" />
         <activity android:name=".DataPasienActivity" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".RegisterActivity" />
@@ -27,7 +30,7 @@
         <activity android:name=".AddDataActivity" />
         <activity android:name=".GiziActivity" />
         <activity android:name=".FilesActivity" />
-        <activity android:name=".SplashScreenActivity">
+        <activity android:name=".SplashScreenActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

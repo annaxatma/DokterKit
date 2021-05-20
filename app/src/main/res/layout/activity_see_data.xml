@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFDF7"
-    tools:context=".PemeriksaanLabActivity">
+    tools:context=".SeeDataActivity">
 
     <ScrollView
         android:layout_width="409dp"
@@ -19,13 +19,13 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/ImageView10"
+                android:id="@+id/ImageView15"
                 android:layout_width="414dp"
                 android:layout_height="153dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/for_p__lab_removebg_preview" />
+                app:srcCompat="@drawable/for_see_data_removebg_preview" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "1066044974512",
-    "project_id": "dokterkit",
-    "storage_bucket": "dokterkit.appspot.com"
+    "project_number": "464918950224",
+    "project_id": "dokterkit-database",
+    "storage_bucket": "dokterkit-database.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1066044974512:android:dba1d139cd11ec877ce275",
+        "mobilesdk_app_id": "1:464918950224:android:eee8e6a8654b97306fbc55",
         "android_client_info": {
           "package_name": "com.example.dokterkit"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1066044974512-g3rmk2sm94ml2emhtkieb0m8e9o5t6ls.apps.googleusercontent.com",
+          "client_id": "464918950224-rt5h64vej923omm5a8p84qnre2cm0a8f.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCUnnrVyb6arfHgTOz3eGEAFqh9d5S8y5s"
+          "current_key": "AIzaSyAxEZzjPzLbGF6f9vi7IU1-nBXLedfOtEQ"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "1066044974512-g3rmk2sm94ml2emhtkieb0m8e9o5t6ls.apps.googleusercontent.com",
+              "client_id": "464918950224-rt5h64vej923omm5a8p84qnre2cm0a8f.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.dokterkit">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,10 +11,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DokterKit">
-        <activity android:name=".EditProfileActivity"></activity>
+        <activity android:name=".NavigationActivity"></activity>
+        <activity android:name=".cardNameActivity" />
+        <activity android:name=".infoNilaiRujukanActivity" />
+        <activity android:name=".EditProfileActivity" />
         <activity android:name=".SeeDataActivity" />
         <activity android:name=".WaitActivity" />
         <activity android:name=".DataPasienActivity" />
+        <activity android:name=".ProfileActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".TatalaksanaActivity" />
@@ -27,6 +31,7 @@
         <activity android:name=".PemeriksaanFisikActivity" />
         <activity android:name=".AnamnesisActivity" />
         <activity android:name=".AddDataActivity" />
+        <activity android:name=".GiziActivity" />
         <activity android:name=".SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

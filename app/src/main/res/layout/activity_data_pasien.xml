@@ -29,9 +29,9 @@
             android:layout_height="wrap_content">
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInput_login_email"
+                android:id="@+id/textInputLayout"
                 android:layout_width="272dp"
-                android:layout_height="55dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -54,8 +54,8 @@
                 android:layout_marginTop="30dp"
                 android:fontFamily="sans-serif"
                 android:text="@string/jenis_kelamin"
-                app:layout_constraintStart_toStartOf="@+id/textInput_login_email"
-                app:layout_constraintTop_toBottomOf="@+id/textInput_login_email" />
+                app:layout_constraintStart_toStartOf="@+id/textInputLayout"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
 
             <RadioGroup
                 android:id="@+id/dataPasien_radioGroup_jKelamin"
@@ -83,7 +83,7 @@
             </RadioGroup>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInput_login_password"
+                android:id="@+id/textInputLayout2"
                 android:layout_width="272dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -102,13 +102,13 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInput_register_email"
+                android:id="@+id/textInputLayout3"
                 android:layout_width="272dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textInput_login_password">
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/dataPasien_textInput_noTelp"
@@ -121,13 +121,13 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInput_register_password"
+                android:id="@+id/textInputLayout4"
                 android:layout_width="272dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textInput_register_email">
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout3">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/dataPasien_textInput_alamat"
@@ -142,9 +142,11 @@
                 android:layout_width="272dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
+                android:layout_marginBottom="300dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textInput_register_password">
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout4">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/dataPasien_textInput_noTelpKeluarga"
@@ -152,6 +154,7 @@
                     android:layout_height="wrap_content"
                     android:background="#00FFFFFF"
                     android:hint="@string/no_telp_keluarga"
+                    android:inputType="number"
                     android:textSize="14sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -171,7 +174,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/dataPasien_imageView_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"

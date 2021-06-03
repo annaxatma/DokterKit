@@ -6,14 +6,17 @@
     <string name="ANAMNESIS">ANAMNESIS</string>
     <string name="PENYEBAB_KASUS">PENYEBAB KASUS</string>
     <string name="PEMERIKSAAN_FISIK">PEMERIKSAAN FISIK</string>
-    <string name="PEMERIKSAAN_LABORATORIUM">PEMERIKSAAN LABORATORIUM</string>
+    <string name="PEMERIKSAAN">PEMERIKSAAN</string>
+    <string name="LABORATORIUM">LABORATORIUM</string>
     <string name="PROGNOSIS">PROGNOSIS</string>
     <string name="DIAGNOSIS">DIAGNOSIS</string>
     <string name="KOMPLIKASI">KOMPLIKASI</string>
-    <string name="MANIFESTASI_KLINIS">MANIFESTASI KLINIS</string>
+    <string name="MANIFESTASI">MANIFESTASI</string>
+    <string name="KLINIS">KLINIS</string>
     <string name="TATALAKSANA">TATALAKSANA</string>
 
     <string name="save">SAVE</string>
+    <string name="export">Export PDF</string>
 
     <string name="Nama_Pasien">Nama Pasien</string>
     <string name="jenis_kelamin">Jenis Kelamin</string>
@@ -46,10 +49,11 @@
     <string name="Eritrosit">Eritrosit</string>
     <string name="Leukosit">Leukosit</string>
     <string name="Trombosit">Trombosit</string>
-    <string name="nilai_rujuk_hemoglobin">Nilai Rujuk Hemoglobin 11.7 – 15.5</string>
-    <string name="nilai_rujuk_eritrosit">Nilai Rujuk Eritrosit 3.8 – 5.2</string>
-    <string name="nilai_rujuk_leukosit">Nilai Rujuk Leukosit 3.6 – 11.0</string>
-    <string name="nilai_rujuk_trombosit">Nilai Rujuk Trombosit 150 – 440</string>
+    <string name="nilai_rujut">NILAI RUJUKAN</string>
+    <string name="nilai_rujuk_hemoglobin">Hemoglobin: 11.7 – 15.5</string>
+    <string name="nilai_rujuk_eritrosit">Eritrosit: 3.8 – 5.2</string>
+    <string name="nilai_rujuk_leukosit">Leukosit: 3.6 – 11.0</string>
+    <string name="nilai_rujuk_trombosit">Trombosit: 150 – 440</string>
 
     <string name="Keluhan_Pasien">Keluhan Pasien</string>
 
@@ -57,4 +61,11 @@
     <string name="Komplikasi">Komplikasi</string>
     <string name="m.fisik">Manifestasi Klinis</string>
     <string name="tatalaksana">Tatalaksana</string>
+
+    <string name="files">File</string>
+    <string name="home">Home</string>
+    <string name="gizi">Gizi</string>
+    <string name="profile">Profile</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -124,22 +124,22 @@ public class RegisterActivity extends AppCompatActivity {
                             Toast.makeText(RegisterActivity.this, "User created.", Toast.LENGTH_SHORT).show();
 
 //                            membuat koleksi di table database
-                            userID = fAuth.getCurrentUser().getUid();
-                            DocumentReference documentReference = fStore.collection("User").document(userID);
-                            Map<String, Object> user = new HashMap<>();
-                            user.put("nama", nama);
-                            user.put("username", username);
-                            user.put("email", email);
-
-                            documentReference.set(user).addOnSuccessListener((OnSuccessListener) (avoid) -> {
-                                Log.d(TAG, "onSucces: user Profile is created for" + userID);
-
-                            }).addOnFailureListener(new OnFailureListener() {
-                                @Override
-                                public void onFailure(@NonNull Exception e) {
-                                    Log.d(TAG, "onFailure: "+ e.toString());
-                                }
-                            });
+//                            userID = fAuth.getCurrentUser().getUid();
+//                            DocumentReference documentReference = fStore.collection("User").document(userID);
+//                            Map<String, Object> user = new HashMap<>();
+//                            user.put("nama", nama);
+//                            user.put("username", username);
+//                            user.put("email", email);
+//
+//                            documentReference.set(user).addOnSuccessListener((OnSuccessListener) (avoid) -> {
+//                                Log.d(TAG, "onSucces: user Profile is created for" + userID);
+//
+//                            }).addOnFailureListener(new OnFailureListener() {
+//                                @Override
+//                                public void onFailure(@NonNull Exception e) {
+//                                    Log.d(TAG, "onFailure: "+ e.toString());
+//                                }
+//                            });
                             startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
 
                         }else {

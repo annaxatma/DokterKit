@@ -17,7 +17,6 @@
         <activity android:name=".DataPasienActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".HomeActivity" />
         <activity android:name=".TatalaksanaActivity" />
         <activity android:name=".ManifestasiKlinisActivity" />
         <activity android:name=".KomplikasiActivity" />
@@ -28,7 +27,6 @@
         <activity android:name=".PemeriksaanFisikActivity" />
         <activity android:name=".AnamnesisActivity" />
         <activity android:name=".AddDataActivity" />
-        <activity android:name=".FilesActivity" />
         <activity android:name=".SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

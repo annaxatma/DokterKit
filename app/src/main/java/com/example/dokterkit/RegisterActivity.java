@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentActivity;
 import android.content.Intent;
 import android.nfc.Tag;
 import android.os.Bundle;
+import android.os.UserHandle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -20,8 +21,10 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.auth.User;
 
 import java.security.PrivateKey;
 import java.util.HashMap;
@@ -121,31 +124,25 @@ public class RegisterActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
-                            Toast.makeText(RegisterActivity.this, "User created.", Toast.LENGTH_SHORT).show();
-
-//                            membuat koleksi di table database
-//                            userID = fAuth.getCurrentUser().getUid();
-//                            DocumentReference documentReference = fStore.collection("User").document(userID);
-//                            Map<String, Object> user = new HashMap<>();
-//                            user.put("nama", nama);
-//                            user.put("username", username);
-//                            user.put("email", email);
-//
-//                            documentReference.set(user).addOnSuccessListener((OnSuccessListener) (avoid) -> {
-//                                Log.d(TAG, "onSucces: user Profile is created for" + userID);
-//                            }).addOnFailureListener(new OnFailureListener() {
-//                                @Override
-//                                public void onFailure(@NonNull Exception e) {
-//                                    Log.d(TAG, "onFailure: "+ e.toString());
-//                                }
-//                            });
+                            Toast.makeText(RegisterActivity.this, "User Created!", Toast.LENGTH_SHORT).show();
+                            userID = fAuth.getCurrentUser().getUid();
+                            DocumentReference documentReference = fStore.collection("Users").document(userID);
+                            Map<String, Object> user = new HashMap<>();
+                            user.put("nama", nama);
+                            user.put("username", username);
+                            user.put("email", email);
+                            documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                @Override
+                                public void onSuccess(Void avoid) {
+                                    Log.d(TAG, "onSucces : user profile is created for "+ userID);
+                                }
+                            });
                             Intent intent = new Intent(getBaseContext(), ProfileActivity.class);
                             startActivity(intent);
 //                            startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
 
                         }else {
-                            Toast.makeText(RegisterActivity.this, "Error !" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-
+                            Toast.makeText(RegisterActivity.this, "Error!" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }
 
                     }
@@ -158,3 +155,41 @@ public class RegisterActivity extends AppCompatActivity {
 
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

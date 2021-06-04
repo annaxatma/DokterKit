@@ -27,18 +27,6 @@ public class ProfileActivity extends Fragment {
 
     public static final String TAG = "ProfileActivity";
 
-    private int position;
-
-    // You can add other parameters here
-    public static ProfileActivity newInstance(int position) {
-        Bundle args = new Bundle();
-        // Pass all the parameters to your bundle
-        args.putInt("pos", position);
-        ProfileActivity fragment = new ProfileActivity();
-        fragment.setArguments(args);
-        return fragment;
-    }
-
     private View view;
     private TextView textview_profile_nama, textview_profile_rumahsakit, textview_profile_notelp, textview_profile_ahli;
     private Button button_edit_profile;
@@ -74,6 +62,7 @@ public class ProfileActivity extends Fragment {
                 textview_profile_nama.setText(documentSnapshot.getString("nama"));
             }
         });
+
 
         //logout
         button_logout.setOnClickListener(new View.OnClickListener() {

@@ -32,6 +32,7 @@ public class DataPasienActivity extends AppCompatActivity {
         initView();
         backButton();
         saveData();
+
     }
 
     private void backButton() {

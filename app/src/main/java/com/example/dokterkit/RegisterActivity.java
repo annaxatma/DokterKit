@@ -2,6 +2,7 @@ package com.example.dokterkit;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentActivity;
 
 import android.content.Intent;
 import android.nfc.Tag;
@@ -35,7 +36,7 @@ public class RegisterActivity extends AppCompatActivity {
     private TextInputLayout textinput_register_nama, textinput_register_username, textinput_register_email, textinput_register_password;
     private ImageView imageview_register_back;
     private Button button_register;
-    private Boolean validateEmail, validatePass;
+    private Boolean validatePass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +50,6 @@ public class RegisterActivity extends AppCompatActivity {
         button_register = findViewById(R.id.button_register);
         imageview_register_back = findViewById(R.id.imageview_register_back);
 
-        validateEmail = false;
         validatePass = false;
 
         fAuth = FirebaseAuth.getInstance();
@@ -133,14 +133,15 @@ public class RegisterActivity extends AppCompatActivity {
 //
 //                            documentReference.set(user).addOnSuccessListener((OnSuccessListener) (avoid) -> {
 //                                Log.d(TAG, "onSucces: user Profile is created for" + userID);
-//
 //                            }).addOnFailureListener(new OnFailureListener() {
 //                                @Override
 //                                public void onFailure(@NonNull Exception e) {
 //                                    Log.d(TAG, "onFailure: "+ e.toString());
 //                                }
 //                            });
-                            startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
+                            Intent intent = new Intent(getBaseContext(), ProfileActivity.class);
+                            startActivity(intent);
+//                            startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
 
                         }else {
                             Toast.makeText(RegisterActivity.this, "Error !" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();

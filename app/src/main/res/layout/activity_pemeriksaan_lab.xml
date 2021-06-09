@@ -17,7 +17,7 @@
         app:srcCompat="@drawable/for_p__lab_removebg_preview" />
 
     <ImageButton
-        android:id="@+id/pLab_imageView_back"
+        android:id="@+id/addPatient_imageView_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
@@ -28,7 +28,7 @@
         app:srcCompat="@drawable/arrow_back" />
 
     <Button
-        android:id="@+id/pLab_button_save"
+        android:id="@+id/addPatient_button_save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
@@ -40,7 +40,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
-        android:id="@+id/plab_imageView_info"
+        android:id="@+id/addPatient_imageView_info"
         android:layout_width="27dp"
         android:layout_height="24dp"
         android:layout_marginTop="24dp"

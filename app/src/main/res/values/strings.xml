@@ -1,18 +1,18 @@
 <resources>
     <string name="app_name">DokterKit</string>
-    <string name="tunggu">Tunggu Sebentar . . .</string>
+    <string name="tunggu">Wait just a moment . . .</string>
+    <string name="welcome">Welcome to</string>
+    <string name="tekan">Press to add patient data</string>
 
     <string name="DATA_PASIEN">DATA PASIEN</string>
     <string name="ANAMNESIS">ANAMNESIS</string>
     <string name="PENYEBAB_KASUS">PENYEBAB KASUS</string>
     <string name="PEMERIKSAAN_FISIK">PEMERIKSAAN FISIK</string>
-    <string name="PEMERIKSAAN">PEMERIKSAAN</string>
-    <string name="LABORATORIUM">LABORATORIUM</string>
+    <string name="PEMERIKSAAN_LABORATORIUM">PEMERIKSAAN LABORATORIUM</string>
     <string name="PROGNOSIS">PROGNOSIS</string>
     <string name="DIAGNOSIS">DIAGNOSIS</string>
     <string name="KOMPLIKASI">KOMPLIKASI</string>
-    <string name="MANIFESTASI">MANIFESTASI</string>
-    <string name="KLINIS">KLINIS</string>
+    <string name="MANIFESTASI_KLINIS">MANIFESTASI KLINIS</string>
     <string name="TATALAKSANA">TATALAKSANA</string>
 
     <string name="save">SAVE</string>

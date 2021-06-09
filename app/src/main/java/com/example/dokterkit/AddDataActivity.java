@@ -5,6 +5,7 @@ import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -41,82 +42,82 @@ public class AddDataActivity extends AppCompatActivity {
         addData_cardView_dataPasien.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent dp = new Intent(getBaseContext(), DataPasienActivity.class);
+                Intent dp = new Intent(getBaseContext(), GiziActivity.class);
                 startActivity(dp);
             }
         });
 
-        addData_cardView_anamnesis.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent anam = new Intent(getBaseContext(), AnamnesisActivity.class);
-                startActivity(anam);
-            }
-        });
-
-        addData_cardView_penyebabKasus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent pk = new Intent(getBaseContext(), PenyebabKasusActivity.class);
-                startActivity(pk);
-            }
-        });
-
-        addData_cardView_pFisik.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent pf = new Intent(getBaseContext(), PemeriksaanFisikActivity.class);
-                startActivity(pf);
-            }
-        });
-
-        addData_cardView_pLab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent pl = new Intent(getBaseContext(), PemeriksaanLabActivity.class);
-                startActivity(pl);
-            }
-        });
-
-        addData_cardView_prognosis.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent prog = new Intent(getBaseContext(), PrognosisActivity.class);
-                startActivity(prog);
-            }
-        });
-
-        addData_cardView_diagnosis.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent diag = new Intent(getBaseContext(), DiagnosisActivity.class);
-                startActivity(diag);
-            }
-        });
-
-        addData_cardView_komplikasi.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent komp = new Intent(getBaseContext(), KomplikasiActivity.class);
-                startActivity(komp);
-            }
-        });
-
-        addData_cardView_mKlinis.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent mk = new Intent(getBaseContext(), ManifestasiKlinisActivity.class);
-                startActivity(mk);
-            }
-        });
-
-        addData_cardView_tatalaksana.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent tata = new Intent(getBaseContext(), TatalaksanaActivity.class);
-                startActivity(tata);
-            }
-        });
+//        addData_cardView_anamnesis.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent anam = new Intent(getBaseContext(), AnamnesisActivity.class);
+//                startActivity(anam);
+//            }
+//        });
+//
+//        addData_cardView_penyebabKasus.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent pk = new Intent(getBaseContext(), PenyebabKasusActivity.class);
+//                startActivity(pk);
+//            }
+//        });
+//
+//        addData_cardView_pFisik.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent pf = new Intent(getBaseContext(), PemeriksaanFisikActivity.class);
+//                startActivity(pf);
+//            }
+//        });
+//
+//        addData_cardView_pLab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent pl = new Intent(getBaseContext(), PemeriksaanLabActivity.class);
+//                startActivity(pl);
+//            }
+//        });
+//
+//        addData_cardView_prognosis.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent prog = new Intent(getBaseContext(), PrognosisActivity.class);
+//                startActivity(prog);
+//            }
+//        });
+//
+//        addData_cardView_diagnosis.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent diag = new Intent(getBaseContext(), DiagnosisActivity.class);
+//                startActivity(diag);
+//            }
+//        });
+//
+//        addData_cardView_komplikasi.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent komp = new Intent(getBaseContext(), KomplikasiActivity.class);
+//                startActivity(komp);
+//            }
+//        });
+//
+//        addData_cardView_mKlinis.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent mk = new Intent(getBaseContext(), ManifestasiKlinisActivity.class);
+//                startActivity(mk);
+//            }
+//        });
+//
+//        addData_cardView_tatalaksana.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent tata = new Intent(getBaseContext(), TatalaksanaActivity.class);
+//                startActivity(tata);
+//            }
+//        });
     }
 
     private void initView(){

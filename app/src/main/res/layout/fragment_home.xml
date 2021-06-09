@@ -6,17 +6,57 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/home_bg"
-    tools:context=".HomeFragment" >
+    tools:context=".HomeFragment">
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton_add"
+    <ImageButton
+        android:id="@+id/home_imageButton_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="18dp"
-        android:layout_marginBottom="30dp"
-        android:clickable="true"
-        android:src="@drawable/ic_baseline_add_24"
-        app:backgroundTint="#C5F4FA"
+        android:backgroundTint="#00875252"
+        android:src="@drawable/home_add"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="79dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/eczar_semibold"
+        android:text="@string/welcome"
+        android:textColor="@color/ic_launcher_background"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/eczar_semibold"
+        android:text="@string/app_name"
+        android:textColor="@color/ic_launcher_background"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@+id/home_imageButton_add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/eczar_semibold"
+        android:text="@string/tekan"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_imageButton_add" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,15 +5,20 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class HomeFragment extends Fragment {
 
-    private FloatingActionButton floatingActionButton_add;
+    private static final String TAG = "ADD DATA";
+    private ImageButton home_imageButton_add;
+    private TextView textView3, textView4, textView5;
     private View view;
 
     @Override
@@ -22,24 +27,28 @@ public class HomeFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_home, container, false);
 
         initView();
-        addData();
+        addButton();
 
 
 
         return view;
     }
 
-    private void addData() {
-        floatingActionButton_add.setOnClickListener(new View.OnClickListener() {
+    private void addButton() {
+        home_imageButton_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent add = new Intent(getActivity(), AddDataActivity.class);
+                Log.d(TAG, "successfuly opened");
+                Intent add = new Intent(getActivity(), AddActivity.class);
                 startActivity(add);
             }
         });
     }
 
     private void initView() {
-        floatingActionButton_add = view.findViewById(R.id.floatingActionButton_add);
+        home_imageButton_add = view.findViewById(R.id.home_imageButton_add);
+        textView3 = view.findViewById(R.id.textView3);
+        textView4 = view.findViewById(R.id.textView4);
+        textView5 = view.findViewById(R.id.textView5);
     }
 }

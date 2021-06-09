@@ -9,7 +9,7 @@
 
     <ScrollView
         android:layout_width="409dp"
-        android:layout_height="656dp"
+        android:layout_height="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -214,8 +214,10 @@
                 android:layout_width="130dp"
                 android:layout_height="100dp"
                 android:layout_marginTop="32dp"
+                android:layout_marginBottom="32dp"
                 app:cardBackgroundColor="#98F6E1"
                 app:cardCornerRadius="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/CardView_imt"
                 app:layout_constraintTop_toBottomOf="@+id/CardView_imt">
 

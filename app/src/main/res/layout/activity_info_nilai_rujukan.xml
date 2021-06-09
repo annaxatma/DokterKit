@@ -4,13 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="#FDFDED"
+    android:backgroundTint="#FDFDED"
     tools:context=".infoNilaiRujukanActivity">
 
     <TextView
         android:id="@+id/textView15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/eczar_semibold"
         android:text="@string/nilai_rujut"
         android:textColor="#000000"
@@ -18,7 +20,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/close" />
 
     <View
         android:id="@+id/divider"
@@ -33,7 +35,7 @@
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/eczar_reguler"
         android:text="@string/nilai_rujuk_hemoglobin"
         android:textColor="#000000"
@@ -78,4 +80,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="22dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="13dp"
+        android:theme="@style/infoTheme"
+        app:layout_constraintStart_toEndOf="@+id/textView15"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_close_24" />
 </androidx.constraintlayout.widget.ConstraintLayout>

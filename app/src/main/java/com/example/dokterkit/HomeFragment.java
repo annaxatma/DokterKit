@@ -31,15 +31,15 @@ public class HomeFragment extends Fragment {
         initView();
         addButton();
 
-        button_logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FirebaseAuth.getInstance().signOut();
-//                gak tau betul atau enggak didepan getApplicationContext dan finish ditambahi getActivity()
-                startActivity(new Intent(getActivity().getApplicationContext(), LoginActivity.class));
-                getActivity().finish();
-            }
-        });
+//        button_logout.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                FirebaseAuth.getInstance().signOut();
+////                gak tau betul atau enggak didepan getApplicationContext dan finish ditambahi getActivity()
+//                startActivity(new Intent(getActivity(), LoginActivity.class));
+//                getActivity().finish();
+//            }
+//        });
 
         return view;
     }
@@ -60,7 +60,7 @@ public class HomeFragment extends Fragment {
         textView3 = view.findViewById(R.id.textView3);
         textView4 = view.findViewById(R.id.textView4);
         textView5 = view.findViewById(R.id.textView5);
-        button_logout = view.findViewById(R.id.button_logout);
+//      button_logout = view.findViewById(R.id.button_logout);
     }
 
 

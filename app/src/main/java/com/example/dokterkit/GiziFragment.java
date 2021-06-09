@@ -35,7 +35,6 @@ public class GiziFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getActivity().getApplicationContext(), karbohidrat.class));
-                getActivity().finish();
             }
         });
 
@@ -43,7 +42,6 @@ public class GiziFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getActivity().getApplicationContext(), protein.class));
-                getActivity().finish();
             }
         });
 
@@ -51,7 +49,6 @@ public class GiziFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getActivity().getApplicationContext(), lemak.class));
-                getActivity().finish();
             }
         });
 
@@ -59,7 +56,6 @@ public class GiziFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getActivity().getApplicationContext(), vitamin.class));
-                getActivity().finish();
             }
         });
 
@@ -67,7 +63,6 @@ public class GiziFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getActivity().getApplicationContext(), imt.class));
-                getActivity().finish();
             }
         });
 
@@ -75,7 +70,6 @@ public class GiziFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getActivity().getApplicationContext(), manifestasi_klinis.class));
-                getActivity().finish();
             }
         });
 
@@ -83,7 +77,6 @@ public class GiziFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getActivity().getApplicationContext(), bmi.class));
-                getActivity().finish();
             }
         });
 

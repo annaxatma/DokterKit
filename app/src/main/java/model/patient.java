@@ -1,16 +1,14 @@
 package model;
 
 public class patient {
-    public String nama, jenisKelamin, alamat, riwayatP, riwayatKP,
-                  obat, alergiO, alergiM, penyebab, fisikM, prognosis, diagnosis, komplikasi,
-                  mKlinis, tata;
-    public int umur, noTelp, noTelpKel, tekananD, gulaD, nadi, tinggi, berat,
+    public static String nama,jenisKelamin,alamat,riwayatP,riwayatKP,obat,alergiO,alergiM,penyebab,fisikM,
+                        prognosis,diagnosis,komplikasi,mKlinis,tata;
+    public static int umur, noTelp, noTelpKel, tekananD, gulaD, nadi, tinggi, berat,
                lingkarP, hemo, erit, leuko, trombo;
+    public int id;
 
     public patient() {
-    }
-
-    public patient(String nama, String jenisKelamin, String alamat, String riwayatP, String riwayatKP, String obat, String alergiO, String alergiM, String penyebab, String fisikM, String prognosis, String diagnosis, String komplikasi, String mKlinis, String tata, int umur, int noTelp, int noTelpKel, int tekananD, int gulaD, int nadi, int tinggi, int berat, int lingkarP, int hemo, int erit, int leuko, int trombo) {
+        this.id = 0;
         this.nama = nama;
         this.jenisKelamin = jenisKelamin;
         this.alamat = alamat;
@@ -41,227 +39,272 @@ public class patient {
         this.trombo = trombo;
     }
 
-    public String getNama() {
+    public patient(int id, String nama) {
+        this.id = 0;
+        this.nama = nama;
+    }
+
+    public patient(int id, String nama, String jenisKelamin, String alamat, String riwayatP, String riwayatKP, String obat, String alergiO, String alergiM, String penyebab, String fisikM, String prognosis, String diagnosis, String komplikasi, String mKlinis, String tata, int umur, int noTelp, int noTelpKel, int tekananD, int gulaD, int nadi, int tinggi, int berat, int lingkarP, int hemo, int erit, int leuko, int trombo) {
+        this.id = 0;
+        this.nama = nama;
+        this.jenisKelamin = jenisKelamin;
+        this.alamat = alamat;
+        this.riwayatP = riwayatP;
+        this.riwayatKP = riwayatKP;
+        this.obat = obat;
+        this.alergiO = alergiO;
+        this.alergiM = alergiM;
+        this.penyebab = penyebab;
+        this.fisikM = fisikM;
+        this.prognosis = prognosis;
+        this.diagnosis = diagnosis;
+        this.komplikasi = komplikasi;
+        this.mKlinis = mKlinis;
+        this.tata = tata;
+        this.umur = umur;
+        this.noTelp = noTelp;
+        this.noTelpKel = noTelpKel;
+        this.tekananD = tekananD;
+        this.gulaD = gulaD;
+        this.nadi = nadi;
+        this.tinggi = tinggi;
+        this.berat = berat;
+        this.lingkarP = lingkarP;
+        this.hemo = hemo;
+        this.erit = erit;
+        this.leuko = leuko;
+        this.trombo = trombo;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public static String getNama() {
         return nama;
     }
 
-    public void setNama(String nama) {
-        this.nama = nama;
+    public static void setNama(String nama) {
+        patient.nama = nama;
     }
 
-    public String getJenisKelamin() {
+    public static String getJenisKelamin() {
         return jenisKelamin;
     }
 
-    public void setJenisKelamin(String jenisKelamin) {
-        this.jenisKelamin = jenisKelamin;
+    public static void setJenisKelamin(String jenisKelamin) {
+        patient.jenisKelamin = jenisKelamin;
     }
 
-    public String getAlamat() {
+    public static String getAlamat() {
         return alamat;
     }
 
-    public void setAlamat(String alamat) {
-        this.alamat = alamat;
+    public static void setAlamat(String alamat) {
+        patient.alamat = alamat;
     }
 
-    public String getRiwayatP() {
+    public static String getRiwayatP() {
         return riwayatP;
     }
 
-    public void setRiwayatP(String riwayatP) {
-        this.riwayatP = riwayatP;
+    public static void setRiwayatP(String riwayatP) {
+        patient.riwayatP = riwayatP;
     }
 
-    public String getRiwayatKP() {
+    public static String getRiwayatKP() {
         return riwayatKP;
     }
 
-    public void setRiwayatKP(String riwayatKP) {
-        this.riwayatKP = riwayatKP;
+    public static void setRiwayatKP(String riwayatKP) {
+        patient.riwayatKP = riwayatKP;
     }
 
-    public String getObat() {
+    public static String getObat() {
         return obat;
     }
 
-    public void setObat(String obat) {
-        this.obat = obat;
+    public static void setObat(String obat) {
+        patient.obat = obat;
     }
 
-    public String getAlergiO() {
+    public static String getAlergiO() {
         return alergiO;
     }
 
-    public void setAlergiO(String alergiO) {
-        this.alergiO = alergiO;
+    public static void setAlergiO(String alergiO) {
+        patient.alergiO = alergiO;
     }
 
-    public String getAlergiM() {
+    public static String getAlergiM() {
         return alergiM;
     }
 
-    public void setAlergiM(String alergiM) {
-        this.alergiM = alergiM;
+    public static void setAlergiM(String alergiM) {
+        patient.alergiM = alergiM;
     }
 
-    public String getPenyebab() {
+    public static String getPenyebab() {
         return penyebab;
     }
 
-    public void setPenyebab(String penyebab) {
-        this.penyebab = penyebab;
+    public static void setPenyebab(String penyebab) {
+        patient.penyebab = penyebab;
     }
 
-    public String getFisikM() {
+    public static String getFisikM() {
         return fisikM;
     }
 
-    public void setFisikM(String fisikM) {
-        this.fisikM = fisikM;
+    public static void setFisikM(String fisikM) {
+        patient.fisikM = fisikM;
     }
 
-    public String getPrognosis() {
+    public static String getPrognosis() {
         return prognosis;
     }
 
-    public void setPrognosis(String prognosis) {
-        this.prognosis = prognosis;
+    public static void setPrognosis(String prognosis) {
+        patient.prognosis = prognosis;
     }
 
-    public String getDiagnosis() {
+    public static String getDiagnosis() {
         return diagnosis;
     }
 
-    public void setDiagnosis(String diagnosis) {
-        this.diagnosis = diagnosis;
+    public static void setDiagnosis(String diagnosis) {
+        patient.diagnosis = diagnosis;
     }
 
-    public String getKomplikasi() {
+    public static String getKomplikasi() {
         return komplikasi;
     }
 
-    public void setKomplikasi(String komplikasi) {
-        this.komplikasi = komplikasi;
+    public static void setKomplikasi(String komplikasi) {
+        patient.komplikasi = komplikasi;
     }
 
-    public String getmKlinis() {
+    public static String getmKlinis() {
         return mKlinis;
     }
 
-    public void setmKlinis(String mKlinis) {
-        this.mKlinis = mKlinis;
+    public static void setmKlinis(String mKlinis) {
+        patient.mKlinis = mKlinis;
     }
 
-    public String getTata() {
+    public static String getTata() {
         return tata;
     }
 
-    public void setTata(String tata) {
-        this.tata = tata;
+    public static void setTata(String tata) {
+        patient.tata = tata;
     }
 
-    public int getUmur() {
+    public static int getUmur() {
         return umur;
     }
 
-    public void setUmur(int umur) {
-        this.umur = umur;
+    public static void setUmur(int umur) {
+        patient.umur = umur;
     }
 
-    public int getNoTelp() {
+    public static int getNoTelp() {
         return noTelp;
     }
 
-    public void setNoTelp(int noTelp) {
-        this.noTelp = noTelp;
+    public static void setNoTelp(int noTelp) {
+        patient.noTelp = noTelp;
     }
 
-    public int getNoTelpKel() {
+    public static int getNoTelpKel() {
         return noTelpKel;
     }
 
-    public void setNoTelpKel(int noTelpKel) {
-        this.noTelpKel = noTelpKel;
+    public static void setNoTelpKel(int noTelpKel) {
+        patient.noTelpKel = noTelpKel;
     }
 
-    public int getTekananD() {
+    public static int getTekananD() {
         return tekananD;
     }
 
-    public void setTekananD(int tekananD) {
-        this.tekananD = tekananD;
+    public static void setTekananD(int tekananD) {
+        patient.tekananD = tekananD;
     }
 
-    public int getGulaD() {
+    public static int getGulaD() {
         return gulaD;
     }
 
-    public void setGulaD(int gulaD) {
-        this.gulaD = gulaD;
+    public static void setGulaD(int gulaD) {
+        patient.gulaD = gulaD;
     }
 
-    public int getNadi() {
+    public static int getNadi() {
         return nadi;
     }
 
-    public void setNadi(int nadi) {
-        this.nadi = nadi;
+    public static void setNadi(int nadi) {
+        patient.nadi = nadi;
     }
 
-    public int getTinggi() {
+    public static int getTinggi() {
         return tinggi;
     }
 
-    public void setTinggi(int tinggi) {
-        this.tinggi = tinggi;
+    public static void setTinggi(int tinggi) {
+        patient.tinggi = tinggi;
     }
 
-    public int getBerat() {
+    public static int getBerat() {
         return berat;
     }
 
-    public void setBerat(int berat) {
-        this.berat = berat;
+    public static void setBerat(int berat) {
+        patient.berat = berat;
     }
 
-    public int getLingkarP() {
+    public static int getLingkarP() {
         return lingkarP;
     }
 
-    public void setLingkarP(int lingkarP) {
-        this.lingkarP = lingkarP;
+    public static void setLingkarP(int lingkarP) {
+        patient.lingkarP = lingkarP;
     }
 
-    public int getHemo() {
+    public static int getHemo() {
         return hemo;
     }
 
-    public void setHemo(int hemo) {
-        this.hemo = hemo;
+    public static void setHemo(int hemo) {
+        patient.hemo = hemo;
     }
 
-    public int getErit() {
+    public static int getErit() {
         return erit;
     }
 
-    public void setErit(int erit) {
-        this.erit = erit;
+    public static void setErit(int erit) {
+        patient.erit = erit;
     }
 
-    public int getLeuko() {
+    public static int getLeuko() {
         return leuko;
     }
 
-    public void setLeuko(int leuko) {
-        this.leuko = leuko;
+    public static void setLeuko(int leuko) {
+        patient.leuko = leuko;
     }
 
-    public int getTrombo() {
+    public static int getTrombo() {
         return trombo;
     }
 
-    public void setTrombo(int trombo) {
-        this.trombo = trombo;
+    public static void setTrombo(int trombo) {
+        patient.trombo = trombo;
     }
 }

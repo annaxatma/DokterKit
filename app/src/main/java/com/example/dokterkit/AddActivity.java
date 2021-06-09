@@ -40,6 +40,7 @@ public class AddActivity extends AppCompatActivity {
     private Button addPatient_button_save;
     private RadioGroup dataPasien_radioGroup_jKelamin;
     private String jenisKelamin;
+    private FirebaseFirestore db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,6 +92,8 @@ public class AddActivity extends AppCompatActivity {
         addPatient_imageView_info = findViewById(R.id.addPatient_imageView_info);
         addPatient_button_save = findViewById(R.id.addPatient_button_save);
 
+        db = FirebaseFirestore.getInstance();
+
         addPatient_imageView_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -98,6 +101,13 @@ public class AddActivity extends AppCompatActivity {
             }
         });
 
+        addPatient_imageView_info.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent info = new Intent(getBaseContext(), infoNilaiRujukanActivity.class);
+                startActivity(info);
+            }
+        });
 
         addPatient_button_save.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -145,22 +155,8 @@ public class AddActivity extends AppCompatActivity {
                 });
 
 
-                addPatient_imageView_info.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent info = new Intent(getBaseContext(), infoNilaiRujukanActivity.class);
-                        startActivity(info);
-                    }
-                });
 
-                //button disable if data is empty
-                if (nama != null || diagnosis != null) {
-                    addPatient_button_save.setEnabled(true);
-                } else {
-                    addPatient_button_save.setEnabled(false);
-                }
 
-                FirebaseFirestore db = FirebaseFirestore.getInstance();
                 Map<String, String> save = new HashMap<>();
 
                 save.put("Nama Pasien", nama);

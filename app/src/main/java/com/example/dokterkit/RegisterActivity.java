@@ -159,6 +159,7 @@ public class RegisterActivity extends AppCompatActivity {
 //                            });
                             Intent intent = new Intent(getBaseContext(), WaitActivity.class);
                             startActivity(intent);
+                            finish();
 //                            startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
 
                         }else {

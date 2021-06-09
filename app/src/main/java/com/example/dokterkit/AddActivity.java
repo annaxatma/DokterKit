@@ -25,7 +25,6 @@ import model.patient;
 public class AddActivity extends AppCompatActivity {
 
     private ImageView addPatient_imageView_back, ImageView10, addPatient_imageView_info;
-    private TextView textView22, textView23, textView21;
     private TextInputLayout dataPasien_textInput_namaPasien, dataPasien_textInput_umur,
             dataPasien_textInput_noTelp, dataPasien_textInput_alamat,
             dataPasien_textInput_noTelpKeluarga, anamnesis_textInput_riwayatPenyakitPsien,
@@ -73,9 +72,6 @@ public class AddActivity extends AppCompatActivity {
         pFisik_textInput_berat = findViewById(R.id.pFisik_textInput_berat);
         pFisik_textInput_lingkarPerut = findViewById(R.id.pFisik_textInput_lingkarPerut);
         pFisik_textInput_fisikMata = findViewById(R.id.pFisik_textInput_fisikMata);
-        textView22 = findViewById(R.id.textView22);
-        textView23 = findViewById(R.id.textView23);
-        textView21 = findViewById(R.id.textView21);
 
         pLab_textInput_hemoglobin = findViewById(R.id.pLab_textInput_hemoglobin);
         pLab_textInput_eritrosit = findViewById(R.id.pLab_textInput_eritrosit);

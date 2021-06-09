@@ -35,8 +35,6 @@ public class NavigationActivity extends AppCompatActivity {
                     selectedFragment = new HomeFragment();
                 }else if(item.getItemId() == R.id.gizi_menu){
                     //selectedFragment = new GiziActivity();
-                }else if(item.getItemId() == R.id.profile_menu){
-                    //selectedFragment = new ProfileActivity();
                 }
 
                 getSupportFragmentManager().beginTransaction().replace(R.id.navigation_frameLayout, selectedFragment).commit();

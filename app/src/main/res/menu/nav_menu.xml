@@ -13,8 +13,4 @@
         android:id="@+id/gizi_menu"
         android:icon="@drawable/nav_nutrition"
         android:title="@string/gizi" />
-    <item
-        android:id="@+id/profile_menu"
-        android:icon="@drawable/nav_profile"
-        android:title="@string/profile" />
 </menu>

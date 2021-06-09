@@ -30,9 +30,10 @@ public class FilesFragment extends Fragment {
     private View view;
     private FirebaseFirestore firebaseFirestore;
     private RecyclerView files_recycleView;
-    private FirestoreRecyclerAdapter adapter;
+    //private FirestoreRecyclerAdapter adapter;
     private ArrayList<patient> patient;
     private FirebaseFirestore db;
+    private myAdapter adapter1;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -48,25 +49,27 @@ public class FilesFragment extends Fragment {
         firebaseFirestore = FirebaseFirestore.getInstance();
         files_recycleView = view.findViewById(R.id.files_recycleView);
 
-        Query query = firebaseFirestore.collection("Patients");
-        FirestoreRecyclerOptions<patient> options = new FirestoreRecyclerOptions.Builder<patient>().setQuery(query, patient.class).build();
-        adapter = new FirestoreRecyclerAdapter<patient, patienViewHolder>(options) {
-            @NonNull
-            @Override
-            public patienViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_card_name, parent, false);
-                return new patienViewHolder(view);
-            }
-
-            @Override
-            protected void onBindViewHolder(@NonNull FilesFragment.patienViewHolder holder, int position, @NonNull patient model) {
-                holder.card_textView_name.setText(model.getNama()+"");
-            }
-        };
-        files_recycleView.setHasFixedSize(true);
+//        Query query = firebaseFirestore.collection("Patients");
+//        FirestoreRecyclerOptions<patient> options = new FirestoreRecyclerOptions.Builder<patient>().setQuery(query, patient.class).build();
+//        adapter = new FirestoreRecyclerAdapter<patient, patienViewHolder>(options) {
+//            @NonNull
+//            @Override
+//            public patienViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+//                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_card_name, parent, false);
+//                return new patienViewHolder(view);
+//            }
+//
+//            @Override
+//            protected void onBindViewHolder(@NonNull FilesFragment.patienViewHolder holder, int position, @NonNull patient model) {
+//                holder.card_textView_name.setText(model.getNama());
+//            }
+//        };
+//        files_recycleView.setHasFixedSize(true);
         files_recycleView.setLayoutManager(new LinearLayoutManager(getContext()));
         patient = new ArrayList<>();
-        files_recycleView.setAdapter(adapter);
+        adapter1 = new myAdapter(patient);
+//      files_recycleView.setAdapter(adapter);
+        files_recycleView.setAdapter(adapter1);
 
         db = FirebaseFirestore.getInstance();
         db.collection("patients").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
@@ -77,7 +80,7 @@ public class FilesFragment extends Fragment {
                     patient obj = d.toObject(patient.class);
                     patient.add(obj);
                 }
-
+                adapter1.notifyDataSetChanged();
             }
         });
     }
@@ -94,15 +97,15 @@ public class FilesFragment extends Fragment {
         }
     }
 
-    @Override
-    public void onStop() {
-        super.onStop();
-        adapter.stopListening();
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        adapter.startListening();
-    }
+//    @Override
+//    public void onStop() {
+//        super.onStop();
+//        adapter.stopListening();
+//    }
+//
+//    @Override
+//    public void onStart() {
+//        super.onStart();
+//        adapter.startListening();
+//    }
 }

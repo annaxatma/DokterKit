@@ -9,15 +9,17 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class HomeFragment extends Fragment {
 
     private static final String TAG = "ADD DATA";
-    private ImageButton home_imageButton_add;
+    private ImageButton home_imageButton_add, button_logout;
     private TextView textView3, textView4, textView5;
     private View view;
 
@@ -29,7 +31,15 @@ public class HomeFragment extends Fragment {
         initView();
         addButton();
 
-
+        button_logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+//                gak tau betul atau enggak didepan getApplicationContext dan finish ditambahi getActivity()
+                startActivity(new Intent(getActivity().getApplicationContext(), LoginActivity.class));
+                getActivity().finish();
+            }
+        });
 
         return view;
     }
@@ -50,5 +60,8 @@ public class HomeFragment extends Fragment {
         textView3 = view.findViewById(R.id.textView3);
         textView4 = view.findViewById(R.id.textView4);
         textView5 = view.findViewById(R.id.textView5);
+        button_logout = view.findViewById(R.id.button_logout);
     }
+
+
 }

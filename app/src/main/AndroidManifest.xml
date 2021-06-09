@@ -10,8 +10,16 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
         android:theme="@style/Theme.DokterKit">
-        <activity android:name=".AddActivity"></activity>
+        <activity android:name=".bmi"></activity>
+        <activity android:name=".manifestasi_klinis" />
+        <activity android:name=".imt" />
+        <activity android:name=".vitamin" />
+        <activity android:name=".lemak" />
+        <activity android:name=".protein" />
+        <activity android:name=".karbohidrat" />
+        <activity android:name=".AddActivity" />
         <activity android:name=".NavigationActivity" />
         <activity android:name=".cardNameActivity" />
         <activity android:name=".infoNilaiRujukanActivity" />
@@ -19,7 +27,6 @@
         <activity android:name=".WaitActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".GiziActivity" />
         <activity android:name=".SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

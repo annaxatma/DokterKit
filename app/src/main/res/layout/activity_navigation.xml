@@ -25,7 +25,7 @@
         android:background="@drawable/nav_bg"
         app:itemIconTint="#2d6a4f"
         app:itemTextColor="#2d6a4f"
-        app:labelVisibilityMode="unlabeled"
+        app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

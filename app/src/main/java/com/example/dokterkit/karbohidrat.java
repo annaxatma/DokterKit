@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class GiziActivity extends AppCompatActivity {
+public class karbohidrat extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_gizi);
+        setContentView(R.layout.activity_karbohidrat);
     }
 }

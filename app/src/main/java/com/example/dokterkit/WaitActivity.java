@@ -13,5 +13,11 @@ public class WaitActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wait);
 
+        new Handler().postDelayed(() -> {
+            //habis splash screen lalu pindah ke login
+            Intent nav = new Intent(this, NavigationActivity.class);
+            startActivity(nav);
+            finish();
+        },3000);
     }
 }

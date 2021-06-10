@@ -31,16 +31,6 @@ public class HomeFragment extends Fragment {
         initView();
         addButton();
 
-//        button_logout.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                FirebaseAuth.getInstance().signOut();
-////                gak tau betul atau enggak didepan getApplicationContext dan finish ditambahi getActivity()
-//                startActivity(new Intent(getActivity(), LoginActivity.class));
-//                getActivity().finish();
-//            }
-//        });
-
         return view;
     }
 

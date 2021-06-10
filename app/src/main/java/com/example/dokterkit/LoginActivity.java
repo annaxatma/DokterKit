@@ -39,7 +39,6 @@ public class LoginActivity extends AppCompatActivity {
         textview_sini = findViewById(R.id.textview_sini);
         fAuth = FirebaseAuth.getInstance();
 
-//        apabila text disini diklik, pindah ke register
         textview_sini.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,13 +68,11 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 }
 
-//                authenticate the user
                 fAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
                             Toast.makeText(LoginActivity.this, "Logged in Successfull.", Toast.LENGTH_SHORT).show();
-//                            startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
                             Intent intent = new Intent(getBaseContext(), WaitActivity.class);
                             startActivity(intent);
                             finish();
@@ -83,7 +80,6 @@ public class LoginActivity extends AppCompatActivity {
                             Toast.makeText(LoginActivity.this, "Error !" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
 
                         }
-                        //hello
 
 
 

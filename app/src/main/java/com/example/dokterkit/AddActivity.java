@@ -154,9 +154,6 @@ public class AddActivity extends AppCompatActivity {
                     }
                 });
 
-
-
-
                 Map<String, String> save = new HashMap<>();
 
                 save.put("Nama Pasien", nama);

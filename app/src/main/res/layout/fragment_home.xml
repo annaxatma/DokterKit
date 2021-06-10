@@ -10,8 +10,8 @@
 
     <ImageButton
         android:id="@+id/home_imageButton_add"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="369dp"
+        android:layout_height="300dp"
         android:backgroundTint="#00875252"
         android:src="@drawable/home_add"
         app:layout_constraintBottom_toBottomOf="parent"

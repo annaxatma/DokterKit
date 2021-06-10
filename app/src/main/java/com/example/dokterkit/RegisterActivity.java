@@ -55,7 +55,6 @@ public class RegisterActivity extends AppCompatActivity {
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
 
-//        Tombol back ke login
         imageview_register_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -106,61 +105,15 @@ public class RegisterActivity extends AppCompatActivity {
                 }
 
 
-//                Register user to firebase
-
-//                Untuk mengecek register sukses atau tidak
                 fAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
                             Toast.makeText(RegisterActivity.this, "User Created!", Toast.LENGTH_SHORT).show();
 
-//                            userID = fAuth.getCurrentUser().getUid();
-//                            DocumentReference documentReference = fStore.collection("Users").document(userID);
-//                            //buat data
-//                            Map<String, Object> user = new HashMap<>();
-//                            user.put("nama", nama);
-//                            user.put("username", username);
-//                            user.put("email", email);
-//
-//                            fStore.collection("Doctor")
-//                                    .add(user)
-//                                    .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-//                                        @Override
-//                                        public void onSuccess(DocumentReference documentReference) {
-//                                            Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
-//                                        }
-//                                    })
-//                                    .addOnFailureListener(new OnFailureListener() {
-//                                        @Override
-//                                        public void onFailure(@NonNull Exception e) {
-//                                            Log.w(TAG, "Error adding document", e);
-//                                        }
-//                                    });
-
-//                            fStore.collection("Doctor").document().set(user).addOnCompleteListener(new OnCompleteListener<Void>() {
-//                                @Override
-//                                public void onComplete(@NonNull Task<Void> task) {
-//                                    if (task.isSuccessful()) {
-//                                        Toast.makeText(RegisterActivity.this, "Data Saved", Toast.LENGTH_SHORT).show();
-//                                        finish();
-//                                    } else {
-//                                        Toast.makeText(RegisterActivity.this, "Data Failed To Save", Toast.LENGTH_SHORT).show();
-//                                    }
-//                                }
-//                            });
-
-
-//                            documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
-//                                @Override
-//                                public void onSuccess(Void avoid) {
-//                                    Log.d(TAG, "onSucces : user profile is created for "+ userID);
-//                                }
-//                            });
                             Intent intent = new Intent(getBaseContext(), WaitActivity.class);
                             startActivity(intent);
                             finish();
-//                            startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
 
                         }else {
                             Toast.makeText(RegisterActivity.this, "Error!" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
